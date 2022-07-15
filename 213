@@ -1,0 +1,655 @@
+KB
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ make
+bin/check-go-bindata-installed
+/home/egorsannikov/go/bin/go-bindata
+go-bindata -o pkg/scratch/infrastructure/project/templates/data.go -pkg templates -prefix "data/scratch/templates/" data/scratch/templates/...
+go mod tidy
+bin/run-go-build cmd/learnreleaser bin/learn-releaser
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/learn-releaser cmd/learnreleaser/main.go
+bin/run-go-build cmd/learnscratch bin/learn-scratch
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/learn-scratch cmd/learnscratch/main.go
+learndevtools/pkg/scratch/infrastructure/project/templates
+learndevtools/pkg/scratch/infrastructure/project
+command-line-arguments
+bin/run-go-build cmd/learnplatform bin/learn-platform
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/learn-platform cmd/learnplatform/status.go cmd/learnplatform/version.go cmd/learnplatform/build.go cmd/learnplatform/check.go cmd/learnplatform/common.go cmd/learnplatform/main.go cmd/learnplatform/update.go
+bin/run-go-build cmd/learni18n bin/learn-i18n
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/learn-i18n cmd/learni18n/version.go cmd/learni18n/args.go cmd/learni18n/main.go
+bin/run-go-build cmd/learni18ntests bin/learn-i18n-tests
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/learn-i18n-tests cmd/learni18ntests/main.go
+bin/run-go-build cmd/rtgenerator bin/rtgenerator
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/rtgenerator cmd/rtgenerator/main.go
+bin/run-go-build cmd/goblin bin/goblin
+go build -v -ldflags -X main.AppVersion=1.2.9 -X main.AppRevision=6570fe74f2a493a11e077fef97f102d90e7a6cb0 -X main.AppGoblinRegistry=git@github.com:Fator26/Test-registry.git -o bin/goblin cmd/goblin/action.go cmd/goblin/printresult.go cmd/goblin/main.go
+go test ./...
+?   	learndevtools/cmd/goblin	[no test files]
+?   	learndevtools/cmd/learni18n	[no test files]
+?   	learndevtools/cmd/learni18ntests	[no test files]
+?   	learndevtools/cmd/learnplatform	[no test files]
+?   	learndevtools/cmd/learnreleaser	[no test files]
+?   	learndevtools/cmd/learnscratch	[no test files]
+?   	learndevtools/cmd/rtgenerator	[no test files]
+ok  	learndevtools/pkg/common/infrastructure/docker	0.003s
+?   	learndevtools/pkg/common/infrastructure/git	[no test files]
+ok  	learndevtools/pkg/common/infrastructure/stringtemplate	0.004s
+ok  	learndevtools/pkg/common/infrastructure/system	0.044s
+?   	learndevtools/pkg/common/infrastructure/xml	[no test files]
+?   	learndevtools/pkg/common/infrastructure/yaml	[no test files]
+?   	learndevtools/pkg/common/infrastructure/youtrackapi	[no test files]
+?   	learndevtools/pkg/goblin/api	[no test files]
+?   	learndevtools/pkg/goblin/app/configuration	[no test files]
+?   	learndevtools/pkg/goblin/app/registry	[no test files]
+?   	learndevtools/pkg/goblin/app/service	[no test files]
+?   	learndevtools/pkg/goblin/app/version	[no test files]
+?   	learndevtools/pkg/goblin/infrastructure/hash	[no test files]
+?   	learndevtools/pkg/goblin/infrastructure/log	[no test files]
+?   	learndevtools/pkg/goblin/infrastructure/registry	[no test files]
+?   	learndevtools/pkg/goblin/infrastructure/repository	[no test files]
+?   	learndevtools/pkg/goblin/infrastructure/schemaconfig	[no test files]
+ok  	learndevtools/pkg/i18n/app	0.002s
+ok  	learndevtools/pkg/i18n/app/qachecks	0.003s
+ok  	learndevtools/pkg/i18n/domain	0.003s
+?   	learndevtools/pkg/i18n/infrastructure/console	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/csv	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/extractor	[no test files]
+ok  	learndevtools/pkg/i18n/infrastructure/git	0.002s
+?   	learndevtools/pkg/i18n/infrastructure/xliff	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/xml/i18nproj	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/xml/languagedevxml	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/xml/languagexml	[no test files]
+?   	learndevtools/pkg/i18n/infrastructure/xml/projectxml	[no test files]
+?   	learndevtools/pkg/platform/app	[no test files]
+?   	learndevtools/pkg/platform/infrastructure/buildproject	[no test files]
+?   	learndevtools/pkg/platform/infrastructure/console	[no test files]
+?   	learndevtools/pkg/platform/infrastructure/docker	[no test files]
+?   	learndevtools/pkg/platform/infrastructure/git	[no test files]
+?   	learndevtools/pkg/platform/infrastructure/project	[no test files]
+?   	learndevtools/pkg/releaser/app	[no test files]
+?   	learndevtools/pkg/releaser/infrastructure/config	[no test files]
+?   	learndevtools/pkg/releaser/infrastructure/console	[no test files]
+?   	learndevtools/pkg/releaser/infrastructure/platform	[no test files]
+?   	learndevtools/pkg/releaser/infrastructure/youtrack	[no test files]
+?   	learndevtools/pkg/rtgenerator	[no test files]
+?   	learndevtools/pkg/scratch/app	[no test files]
+?   	learndevtools/pkg/scratch/infrastructure/console	[no test files]
+?   	learndevtools/pkg/scratch/infrastructure/project	[no test files]
+?   	learndevtools/pkg/scratch/infrastructure/project/templates	[no test files]
+bin/learn-i18n-tests
+2022/07/14 16:30:10 Test #1 of "./bin/learn-i18n export" PASS
+2022/07/14 16:30:11 Test #2 of "./bin/learn-i18n export" PASS
+2022/07/14 16:30:11 Test #3 of "./bin/learn-i18n export" PASS
+2022/07/14 16:30:11 Test #4 of "./bin/learn-i18n export" PASS
+2022/07/14 16:30:11 Test #1 of "./bin/learn-i18n extract" PASS
+2022/07/14 16:30:11 Test #2 of "./bin/learn-i18n extract" PASS
+2022/07/14 16:30:11 Test #3 of "./bin/learn-i18n extract" PASS
+2022/07/14 16:30:11 Test #4 of "./bin/learn-i18n extract" PASS
+golangci-lint run ./... --config .golangci.yml
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ goblin discover
+2022/07/14 16:30:35 remote repository is empty
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ li ~/.ssh/ 
+li: command not found
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ ll ~/.ssh/ 
+total 40
+drwx------  2 egorsannikov egorsannikov 4096 июл 13 17:32 ./
+drwxr-x--- 24 egorsannikov egorsannikov 4096 июл 14 16:25 ../
+-rw-------  1 egorsannikov egorsannikov  513 июл 13 17:32 id_ecdsa
+-rw-r--r--  1 egorsannikov egorsannikov  185 июл 13 17:32 id_ecdsa.pub
+-rw-------  1 egorsannikov egorsannikov  464 июл 12 16:57 id_ed25519
+-rw-r--r--  1 egorsannikov egorsannikov   99 июл 12 16:57 id_ed25519.pub
+-rw-------  1 egorsannikov egorsannikov 2655 июл 12 16:53 id_rsa
+-rw-r--r--  1 egorsannikov egorsannikov  577 июл 12 16:53 id_rsa.pub
+-rw-------  1 egorsannikov egorsannikov  806 июл 13 17:18 known_hosts
+-rw-r--r--  1 egorsannikov egorsannikov  142 июл 13 17:16 known_hosts.old
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cat ~/ssh/id_rsa.pub
+cat: /home/egorsannikov/ssh/id_rsa.pub: No such file or directory
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChcLYo9nTAb6E6RihJM/7L3G8BSOaTDcRVK4fn1dOkp3VDqD46uc0GjOGGFZtK4qTEQK67D0hd2ZVujaiPvPnW9FJLy5iy30sBgWjJ913LgS8w0ygLzWOddVmBvj4c52bNJ+VgGRI3dkSu5/6nkeIyWmyHKDzgnZxGZ9iUb4jR5mjctITtA3LqXvWGyH4OUJo9xYRyCkRKPEeTVuq2kjjn5YI6V1qZxjM7H4myqhLhHCfv/n3GrKmEOTiOGzc15zcQynVvf2riF8wvrXh1d7JG6DU8eI4jk4NgZDP7ppfd2dMDFqoLiDVzBHe4vfNZbdE9e8NAf5Q/1W0LF5zCsLeJ5wKoJOQpO15SK3e6vY3GYPcvioPG00U9ZPf9EK5340r/L6SM7zA8jcxTbwhL70yP4uZpIbtG9yYwBGQzUsGEG6tD1bIj1MfmPv+HAMJBHbsSkQp5dO49QKy6ye3ApsoQfw5pGrHMdHWSMUule3ARjO0ik2YT/aYp6YwQollVQ3s= egorsannikov@e-sannikov
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ goblin discover
+2022/07/14 16:32:24 unknown error: ERROR: You're using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cat ~/.ssh/ecdsa.pub
+cat: /home/egorsannikov/.ssh/ecdsa.pub: No such file or directory
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ ll ~/.ssh/ecdsa.pub
+ls: cannot access '/home/egorsannikov/.ssh/ecdsa.pub': No such file or directory
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ ll ~/.ssh/
+total 40
+drwx------  2 egorsannikov egorsannikov 4096 июл 13 17:32 ./
+drwxr-x--- 24 egorsannikov egorsannikov 4096 июл 14 16:25 ../
+-rw-------  1 egorsannikov egorsannikov  513 июл 13 17:32 id_ecdsa
+-rw-r--r--  1 egorsannikov egorsannikov  185 июл 13 17:32 id_ecdsa.pub
+-rw-------  1 egorsannikov egorsannikov  464 июл 12 16:57 id_ed25519
+-rw-r--r--  1 egorsannikov egorsannikov   99 июл 12 16:57 id_ed25519.pub
+-rw-------  1 egorsannikov egorsannikov 2655 июл 12 16:53 id_rsa
+-rw-r--r--  1 egorsannikov egorsannikov  577 июл 12 16:53 id_rsa.pub
+-rw-------  1 egorsannikov egorsannikov  806 июл 13 17:18 known_hosts
+-rw-r--r--  1 egorsannikov egorsannikov  142 июл 13 17:16 known_hosts.old
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ ll ~/.ssh/id_ecdsa.pub
+-rw-r--r-- 1 egorsannikov egorsannikov 185 июл 13 17:32 /home/egorsannikov/.ssh/id_ecdsa.pub
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cat ~/.ssh/id_ecdsa.pub
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJoNFEZo9KG7YaaHiVNV3/qSMlz/wJI8XpOdzzELG3nXmnwDY8xikELU+ePOBO93G2sbsGqrhMEn3Boxt8Fwkjk= egorsannikov@e-sannikov
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ ^C
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ goblin discover
+2022/07/14 16:33:45 remote repository is empty
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cd //
+egorsannikov@e-sannikov://$ cd ..
+egorsannikov@e-sannikov://$ cd..
+cd..: command not found
+egorsannikov@e-sannikov://$ cd ~
+egorsannikov@e-sannikov:~$ pwd
+/home/egorsannikov
+egorsannikov@e-sannikov:~$ cd goblin
+bash: cd: goblin: No such file or directory
+egorsannikov@e-sannikov:~$ cd Govlin
+bash: cd: Govlin: No such file or directory
+egorsannikov@e-sannikov:~$ cd Goblin
+egorsannikov@e-sannikov:~/Goblin$ cd Test-registry
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin discover
+2022/07/14 16:38:16 remote repository is empty
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git add *.yaml
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   api/knowledgebase/knowledgebase.proto
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    api/knowledgebase/knowledgebase.proto
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.idea/
+	log
+
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ cd ..
+egorsannikov@e-sannikov:~/Goblin$ git clone git@github.com:Fator26/Test-registry.git
+Cloning into 'Test-registry'...
+warning: You appear to have cloned an empty repository.
+egorsannikov@e-sannikov:~/Goblin$ goblin discover
+2022/07/14 16:39:25 remote repository is empty
+egorsannikov@e-sannikov:~/Goblin$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+egorsannikov@e-sannikov:~/Goblin$ cd Test-registry
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git add .
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   Consumer/api/knowledgebase/knowledgebase.proto
+
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git commit -m Consumer
+[main (root-commit) 232b091] Consumer
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Consumer/api/knowledgebase/knowledgebase.proto
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 351 bytes | 351.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Fator26/Test-registry.git
+ * [new branch]      main -> main
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin discover
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin install dev
+2022/07/14 16:40:38 config not found
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ ^Cd
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ cd ..
+egorsannikov@e-sannikov:~/Goblin$ cd ..
+egorsannikov@e-sannikov:~$ cd /home/egorsannikov/GolandProjects/learndevtools/cmd/goblin/
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/cmd/goblin$ goblin publish dev
+2022/07/14 16:43:59 config not found
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/cmd/goblin$ cd ..
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/cmd$ cd ..
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ goblin publish dev
+2022/07/14 16:44:12 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cd /home/egorsannikov/GolandProjects/learndevtools/data/scratch/templates/microservice/
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin publish dev
+2022/07/14 16:45:06 yaml: unmarshal errors:
+  line 1: cannot unmarshal !!map into registry.ProviderID
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin publish devcd^C
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ cd /home/egorsannikov/Goblin/Test-registry/Consumer/
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin publish dev
+2022/07/14 16:46:40 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ cd ..
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git add *.yaml
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Consumer/goblin.yaml
+
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git commit -m Yaml 
+[main 94220c2] Yaml
+ 1 file changed, 12 insertions(+)
+ create mode 100644 Consumer/goblin.yaml
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 426 bytes | 426.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Fator26/Test-registry.git
+   232b091..94220c2  main -> main
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ cd Consumer
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin publish dev
+2022/07/14 16:47:30 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install
+2022/07/14 16:47:55 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin discover
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+2022/07/14 16:49:23 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+2022/07/14 16:51:47 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin -v
+goblin version 1.2.9+git.6570fe74f2a493a11e077fef97f102d90e7a6cb0
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin version
+No help topic for 'version'
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin --version
+goblin version 1.2.9+git.6570fe74f2a493a11e077fef97f102d90e7a6cb0
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+    
+2022/07/14 16:54:21 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ 
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+2022/07/14 16:54:27 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install
+2022/07/14 16:54:33 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ ^[[2~^[[2~^[[2~^M
+: command not found
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+2022/07/14 16:55:24 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin install dev
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A2022/07/14 16:55:29 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ goblin publish dev
+2022/07/14 16:55:34 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer$ cd ..
+cd: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+egorsannikov@e-sannikov:~/Goblin/Test-registry/Consumer/..$ cd .. 
+egorsannikov@e-sannikov:~/Goblin$ git clone id: my-service-id
+provides:
+  - id: internal-api #ID схемы
+    files:
+      - path: api/internal-api.proto #путь к файлу схемы, относительно расположения конфига
+        version: 0.1.7-feature #версия схемы
+    min-version: 0.1.0 #минимальная версия схемы
+  - id: frontend-api
+    files:
+      - path: api/frontend-api.openapi.yml
+        version: 0.1.2
+        min-version: 0.1.0
+      - path: api/frontend-api.openapi-v2.yml
+        version: 0.2.0
+        min-version: 0.2.0
+Cloning into 'my-service-id'...
+ssh: Could not resolve hostname id: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+provides:: command not found
+-: command not found
+files:: command not found
+-: command not found
+version:: command not found
+min-version:: command not found
+-: command not found
+files:: command not found
+-: command not found
+version:: command not found
+min-version:: command not found
+-: command not found
+version:: command not found
+min-version:: command not found
+egorsannikov@e-sannikov:~/Goblin$ git clone git@github.com:Fator26/Test-registry.git
+Cloning into 'Test-registry'...
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (26/26), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 26 (delta 1), reused 10 (delta 0), pack-reused 0
+Receiving objects: 100% (26/26), done.
+Resolving deltas: 100% (1/1), done.
+egorsannikov@e-sannikov:~/Goblin$ cd Test-registry
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin publish dev
+2022/07/14 16:58:11 open /home/egorsannikov/Goblin/Test-registry/api/internal-api.proto: no such file or directory
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin publish dev
+2022/07/14 16:59:44 open /home/egorsannikov/Goblin/Test-registry/home/egorsannikov/GolandProjects/learndevtools/cmd/goblin: no such file or directory
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ goblin publish dev^C
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ cd..
+cd..: command not found
+egorsannikov@e-sannikov:~/Goblin/Test-registry$ cd ..
+egorsannikov@e-sannikov:~/Goblin$ cd ..
+egorsannikov@e-sannikov:~$ cd GolandProjects/learndevtools
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ goblin publish dev
+2022/07/14 17:01:51 yaml: mapping values are not allowed in this context
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools$ cd data
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data$ cd /home/egorsannikov/GolandProjects/learndevtools/data/scratch/templates/microservice/
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin publish dev
+2022/07/14 17:02:19 yaml: unmarshal errors:
+  line 1: cannot unmarshal !!map into registry.ProviderID
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin publish dev
+2022/07/14 17:02:53 yaml: unmarshal errors:
+  line 1: cannot unmarshal !!map into registry.ProviderID
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin publish dev
+No schemas published
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin install dev
+No schemas installed
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin install
+No schemas installed
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ ^C
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ goblin install
+No schemas installed
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates/microservice$ cd ..
+egorsannikov@e-sannikov:~/GolandProjects/learndevtools/data/scratch/templates$ cd ~
+egorsannikov@e-sannikov:~$ cd Goblin
+egorsannikov@e-sannikov:~/Goblin$ cd Goblin
+egorsannikov@e-sannikov:~/Goblin/Goblin$ echo >goblin.yaml
+egorsannikov@e-sannikov:~/Goblin/Goblin$ sudo apt install mc
+\[sudo] password for egorsannikov: 
+Sorry, try again.
+[sudo] password for egorsannikov: 
+Sorry, try again.
+[sudo] password for egorsannikov: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi
+  libgstreamer-plugins-bad1.0-0 libva-wayland2
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libssh2-1 mc-data
+Suggested packages:
+  arj catdvi | texlive-binaries dbview djvulibre-bin epub-utils gv imagemagick
+  libaspell-dev links | w3m | lynx odt2txt python python-boto python-tz unar
+  wimtools
+The following NEW packages will be installed:
+  libssh2-1 mc mc-data
+0 upgraded, 3 newly installed, 0 to remove and 3 not upgraded.
+Need to get 2 084 kB of archives.
+After this operation, 8 209 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1 amd64 1.10.0-3 [109 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 mc-data all 3:4.8.27-1 [1 427 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 mc amd64 3:4.8.27-1 [547 kB]
+Fetched 2 084 kB in 1s (3 971 kB/s)
+Selecting previously unselected package libssh2-1:amd64.
+(Reading database ... 204300 files and directories currently installed.)
+Preparing to unpack .../libssh2-1_1.10.0-3_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3) ...
+Selecting previously unselected package mc-data.
+Preparing to unpack .../mc-data_3%3a4.8.27-1_all.deb ...
+Unpacking mc-data (3:4.8.27-1) ...
+Selecting previously unselected package mc.
+Preparing to unpack .../mc_3%3a4.8.27-1_amd64.deb ...
+Unpacking mc (3:4.8.27-1) ...
+Setting up mc-data (3:4.8.27-1) ...
+Setting up libssh2-1:amd64 (1.10.0-3) ...
+Setting up mc (3:4.8.27-1) ...
+update-alternatives: using /usr/bin/mcview to provide /usr/bin/view (view) in au
+to mode
+Processing triggers for libc-bin (2.35-0ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit goblin.yaml 
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit schema.txt
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+^C
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin -h
+NAME:
+   goblin - package manager for internal schema registry
+
+USAGE:
+   goblin [global options] command [command options] [arguments...]
+
+VERSION:
+   1.2.9+git.6570fe74f2a493a11e077fef97f102d90e7a6cb0
+
+COMMANDS:
+   add      add or updated consumed schema version to config
+   install  install dependencies respecting locked hash
+   publish  publish provided schemas in dev|release mod
+   check    check for schemas been published and upgraded
+   help, h  Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --registry-repository value, -R value  path to registry git repository (default: "git@github.com:Fator26/Test-registry.git") [$GOBLIN_REGISTRY_REPOSITORY]
+   --work-dir value, -W value             path to work directory (default: "/home/egorsannikov/Goblin/Goblin")
+   --silent, -S                           print info messages (default: false)
+   --debug, -D                            print debug messages (default: false)
+   --help, -h                             show help (default: false)
+   --version, -v                          print the version (default: false)
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin discover
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+2022/07/14 17:35:35 yaml: line 5: found character that cannot start any token
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit goblin.yaml 
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+2022/07/14 17:36:17 yaml: line 4: found character that cannot start any token
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+^C
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit goblin.yaml 
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit goblin.yaml 
+\
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+2022/07/14 17:37:44 reference not found
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin -D publish dev
+DEBUG: Cloning git@github.com:Fator26/Test-registry.git into memFs
+DEBUG: Fetching origin
+DEBUG: Checking out branch master
+DEBUG: Lock-file not found
+DEBUG: Checking out branch dev
+DEBUG: Publishing: test-provider.my-schema.0.0.1-dev
+DEBUG: Generated version: test-provider.my-schema.0.0.1-dev.1657809478744524326+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+DEBUG: Checking out branch dev
+DEBUG: Checking out branch master
+2022/07/14 17:37:58 reference not found
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin -D publish dev
+DEBUG: Cloning git@github.com:Fator26/Test-registry.git into memFs
+DEBUG: Fetching origin
+DEBUG: Checking out branch master
+DEBUG: Lock-file not found
+DEBUG: Checking out branch dev
+DEBUG: Publishing: test-provider.my-schema.0.0.1-dev
+DEBUG: Generated version: test-provider.my-schema.0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+DEBUG: Checking out branch dev
+DEBUG: Checking out branch master
+DEBUG: Creating branch dev
+DEBUG: Copying /home/egorsannikov/Goblin/Goblin/schema.txt to test-provider.my-schema.0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+DEBUG: Committing changes test-provider.my-schema.0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+DEBUG: Dev-published: test-provider.my-schema.0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+DEBUG: Pushing changes
+Published schemas:
+    my-schema:0.0.1-dev -> 0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+Published schemas:
+    my-schema:0.0.1-dev -> 0.0.1-dev.1657809541183879223+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+egorsannikov@e-sannikov:~/Goblin/Goblin$ cd ..
+egorsannikov@e-sannikov:~/Goblin$ mkdir consumer
+egorsannikov@e-sannikov:~/Goblin$ cd consumer/
+egorsannikov@e-sannikov:~/Goblin/consumer$ cp ../Goblin/goblin.yaml goblin.yaml
+egorsannikov@e-sannikov:~/Goblin/consumer$ mcedit goblin.yaml 
+
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install
+2022/07/14 17:44:34 schema test-provider.my-schema:0.0.1: schema not found in registry
+egorsannikov@e-sannikov:~/Goblin/consumer$ mcedit goblin.yaml 
+
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install
+Installed schemas:
+    test-provider/my-schema:0.0.1-dev -> 0.0.1-dev.1657809541183879223+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+File goblin.yaml updated
+egorsannikov@e-sannikov:~/Goblin/consumer$ mc
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/mcedit
+  3. /usr/bin/vim.tiny
+  4. /bin/ed
+
+Choose 1-4 [1]: 2
+
+
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ mcedit schema.txt 
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish dev
+Published schemas:
+    my-schema:0.0.1-dev -> 0.0.1-dev.1657809952599797422+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+egorsannikov@e-sannikov:~/Goblin/Goblin$ 
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install
+Installed schemas:
+    test-provider/my-schema:0.0.1-dev -> 0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+egorsannikov@e-sannikov:~/Goblin/consumer$ 
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install -h
+NAME:
+   goblin install - install dependencies respecting locked hash
+
+USAGE:
+   goblin install [command options] [arguments...]
+
+OPTIONS:
+   --upgrade, -u            ignore locked hash and search for new compatible version. updates config-file and lock-file (default: false)
+   --upgrade-release, --ur  ignore locked hash and feature tag and search for new compatible release version. updates config-file and lock-file (default: false)
+   --help, -h               show help (default: false)
+   
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install -u
+Installed schemas:
+    test-provider/my-schema:0.0.1-dev -> 0.0.1-dev.1657809952599797422+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+File goblin.yaml updated
+egorsannikov@e-sannikov:~/Goblin/consumer$ 
+
+
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ 
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin publish release
+^C
+egorsannikov@e-sannikov:~/Goblin/consumer$ 
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin publish release
+Published schemas:
+    my-schema:0.0.1-dev -> 0.0.1+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+File goblin.yaml updated
+egorsannikov@e-sannikov:~/Goblin/Goblin$ 
+
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install -
+^C
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install
+Installed schemas:
+    test-provider/my-schema:0.0.1-dev -> 0.0.1-dev.1657809952599797422+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install -u
+^C
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install -h
+NAME:
+   goblin install - install dependencies respecting locked hash
+
+USAGE:
+   goblin install [command options] [arguments...]
+
+OPTIONS:
+   --upgrade, -u            ignore locked hash and search for new compatible version. updates config-file and lock-file (default: false)
+   --upgrade-release, --ur  ignore locked hash and feature tag and search for new compatible release version. updates config-file and lock-file (default: false)
+   --help, -h               show help (default: false)
+   
+egorsannikov@e-sannikov:~/Goblin/consumer$ goblin install --ur
+Installed schemas:
+    test-provider/my-schema:0.0.1-dev -> 0.0.1+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+File goblin.yaml updated
+File goblin-lock.yaml updated
+egorsannikov@e-sannikov:~/Goblin/consumer$ 
+
+
+
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin discover
+test-provider:
+  my-schema:
+    0.0.1+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin discover -f dev
+test-provider:
+  my-schema:
+    0.0.1-dev.1657809528898544753+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+    0.0.1-dev.1657809541183879223+f42d6c8903ce8daafe7f6e1691f8c4fbc20356e195dd1c4b19977a1dac0555ed
+    0.0.1-dev.1657809952599797422+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+    0.0.1+076796c223fbaf575166022d88b6f2f8d507d0304ff704414c4b963cde2b0df0
+egorsannikov@e-sannikov:~/Goblin/Goblin$ eval "$(ssh-agent -k)"
+SSH_AGENT_PID not set, cannot kill agent
+egorsannikov@e-sannikov:~/Goblin/Goblin$ eval "$(ssh-agent -k)"
+SSH_AGENT_PID not set, cannot kill agent
+egorsannikov@e-sannikov:~/Goblin/Goblin$ env 
+SHELL=/bin/bash
+SESSION_MANAGER=local/e-sannikov:@/tmp/.ICE-unix/2393,unix/e-sannikov:/tmp/.ICE-unix/2393
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+HISTCONTROL=ignoreboth
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LC_ADDRESS=ru_RU.UTF-8
+GNOME_SHELL_SESSION_MODE=ubuntu
+LC_NAME=ru_RU.UTF-8
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+LC_MONETARY=ru_RU.UTF-8
+GTK_MODULES=gail:atk-bridge
+PWD=/home/egorsannikov/Goblin/Goblin
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=egorsannikov
+XDG_SESSION_TYPE=wayland
+SYSTEMD_EXEC_PID=2687
+MC_TMPDIR=/tmp/mc-egorsannikov
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.RVYQP1
+MC_SID=25317
+HOME=/home/egorsannikov
+USERNAME=egorsannikov
+IM_CONFIG_PHASE=1
+LANG=en_US.UTF-8
+LC_PAPER=ru_RU.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+WAYLAND_DISPLAY=wayland-0
+GOBLIN_REGISTRY_REPOSITORY=git@github.com:Fator26/Test-registry.git
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/ffd1c495_1eba_47ec_be4f_1c2594fb5d70
+GNOME_SETUP_DISPLAY=:1
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+LC_IDENTIFICATION=ru_RU.UTF-8
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=egorsannikov
+GNOME_TERMINAL_SERVICE=:1.130
+DISPLAY=:0
+SHLVL=2
+LC_TELEPHONE=ru_RU.UTF-8
+QT_IM_MODULE=ibus
+LC_MEASUREMENT=ru_RU.UTF-8
+XDG_RUNTIME_DIR=/run/user/1000
+LC_TIME=ru_RU.UTF-8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/bin:/home/egorsannikov/go/bin://GolandProjects/learndevtools/bin:/bin:/home/egorsannikov/go/bin://home/egorsannikov/GolandProjects/learndevtools/bin:/bin:/home/egorsannikov/go/bin:/bin:/home/egorsannikov/go/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+LC_NUMERIC=ru_RU.UTF-8
+OLDPWD=/home/egorsannikov/Goblin/consumer
+GOPATH=/home/egorsannikov/go
+_=/usr/bin/env
+egorsannikov@e-sannikov:~/Goblin/Goblin$ env | grep ssh
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+egorsannikov@e-sannikov:~/Goblin/Goblin$ unset SSH_AUTH_SOCK
+egorsannikov@e-sannikov:~/Goblin/Goblin$ env | grep ssh
+egorsannikov@e-sannikov:~/Goblin/Goblin$ goblin discover -f dev
+2022/07/14 17:56:48 error creating SSH agent: "SSH agent requested but SSH_AUTH_SOCK not-specified"
+egorsannikov@e-sannikov:~/Goblin/Goblin$ 
+
